@@ -27,6 +27,8 @@ import { OrderSuccessComponent } from "./order-success/order-success.component";
 import { MyOrdersComponent } from "./my-orders/my-orders.component";
 import { AdminProductsComponent } from "./admin/admin-products/admin-products.component";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
+import { ProductFilterComponent } from './products/product-filter/product-filter.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { ProductFormComponent } from "./admin/product-form/product-form.componen
     AdminProductsComponent,
     LoginComponent,
     AdminOrdersComponent,
-    ProductFormComponent
+    ProductFormComponent,
+    ProductFilterComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +54,7 @@ import { ProductFormComponent } from "./admin/product-form/product-form.componen
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
-      { path: "", component: HomeComponent },
+      { path: "", component: ProductsComponent },
       { path: "products", component: ProductsComponent },
       { path: "shopping-cart", component: ShoppingCartComponent },
 
