@@ -25,7 +25,7 @@ export class ProductFormComponent implements OnInit {
         .get(this.id)
         .pipe(take(1))
         .subscribe(p => {
-          return (this.product = p.payload.val());
+          return (this.product = p);
         });
   }
 

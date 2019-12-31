@@ -21,10 +21,7 @@ export class AdminProductsComponent implements OnInit, OnDestroy {
   filter(query: string) {
     this.filterProducts = query
       ? this.products.filter(p => {
-          return p.payload
-            .val()
-            .title.toLocaleLowerCase()
-            .includes(query);
+          return p.title.toLocaleLowerCase().includes(query);
         })
       : this.products;
   }

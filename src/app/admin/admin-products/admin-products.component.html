@@ -25,8 +25,8 @@
   }}</option> -->
   <tbody>
     <tr *ngFor="let p of filterProducts">
-      <td>{{ p.payload.val().title }}</td>
-      <td>{{ p.payload.val().price }}</td>
+      <td>{{ p.title }}</td>
+      <td>{{ p.price }}</td>
       <td><a [routerLink]="['/admin/products/', p.key]">Edit</a></td>
     </tr>
   </tbody>

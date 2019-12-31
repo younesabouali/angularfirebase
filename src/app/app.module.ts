@@ -17,6 +17,7 @@ import { CategoryService } from "./category.service";
 import { AdminAuthGardService as AdminAuthGard } from "./services/admin-auth-gard.service";
 import { AppComponent } from "./app.component";
 import { BsNavbarComponent } from "./bs-navbar/bs-navbar.component";
+import { ShoppingCartService } from "./shopping-cart.service";
 import { UserService } from "./services/user.service";
 import { AuthService } from "./services/auth.service";
 import { HomeComponent } from "./home/home.component";
@@ -27,8 +28,9 @@ import { OrderSuccessComponent } from "./order-success/order-success.component";
 import { MyOrdersComponent } from "./my-orders/my-orders.component";
 import { AdminProductsComponent } from "./admin/admin-products/admin-products.component";
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
-import { ProductFilterComponent } from './products/product-filter/product-filter.component';
-import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductFilterComponent } from "./products/product-filter/product-filter.component";
+import { ProductCardComponent } from "./product-card/product-card.component";
+import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +46,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     AdminOrdersComponent,
     ProductFormComponent,
     ProductFilterComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductQuantityComponent
   ],
   imports: [
     BrowserModule,
@@ -99,7 +102,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     UserService,
     AdminAuthGard,
     CategoryService,
-    ProductService
+    ProductService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
