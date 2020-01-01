@@ -5,7 +5,6 @@ import { FormsModule } from "@angular/forms";
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
 import { CustomFormsModule } from "ng2-validation";
-
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { environment } from "./../environments/environment";
 import { ProductService } from "./product.service";
@@ -16,6 +15,7 @@ import { RouterModule } from "@angular/router";
 import { CategoryService } from "./category.service";
 import { AdminAuthGardService as AdminAuthGard } from "./services/admin-auth-gard.service";
 import { AppComponent } from "./app.component";
+import { OrderService } from "./order.service";
 import { BsNavbarComponent } from "./bs-navbar/bs-navbar.component";
 import { ShoppingCartService } from "./shopping-cart.service";
 import { UserService } from "./services/user.service";
@@ -30,7 +30,9 @@ import { AdminProductsComponent } from "./admin/admin-products/admin-products.co
 import { ProductFormComponent } from "./admin/product-form/product-form.component";
 import { ProductFilterComponent } from "./products/product-filter/product-filter.component";
 import { ProductCardComponent } from "./product-card/product-card.component";
-import { ProductQuantityComponent } from './product-quantity/product-quantity.component';
+import { ProductQuantityComponent } from "./product-quantity/product-quantity.component";
+import { ShoppingCartSummaryComponent } from "./shopping-cart-summary/shopping-cart-summary.component";
+import { ShippingFormComponent } from "./shipping-form/shipping-form.component";
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,9 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     ProductFormComponent,
     ProductFilterComponent,
     ProductCardComponent,
-    ProductQuantityComponent
+    ProductQuantityComponent,
+    ShoppingCartSummaryComponent,
+    ShippingFormComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +65,7 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
       { path: "products", component: ProductsComponent },
       { path: "shopping-cart", component: ShoppingCartComponent },
 
-      { path: "order-success", component: OrderSuccessComponent },
+      { path: "order-success/:orderId", component: OrderSuccessComponent },
       { path: "login", component: LoginComponent },
       {
         path: "my/orders",
@@ -103,7 +107,8 @@ import { ProductQuantityComponent } from './product-quantity/product-quantity.co
     AdminAuthGard,
     CategoryService,
     ProductService,
-    ShoppingCartService
+    ShoppingCartService,
+    OrderService
   ],
   bootstrap: [AppComponent]
 })
