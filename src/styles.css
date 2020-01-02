@@ -1,5 +1,26 @@
 @import "~bootstrap/dist/css/bootstrap.css";
-
+@import "~font-awesome/css/font-awesome.css";
 body {
   padding-top: 80px;
+}
+.navbar-light .navbar-brand {
+  color: rgba(109, 171, 115, 0.9);
+}
+a {
+  color: rgba(109, 171, 115, 0.9);
+}
+.list-group-item.active {
+  background-color: rgba(109, 171, 115, 0.9);
+  border-color: rgba(109, 171, 115, 0.9);
+}
+.btn.btn-primary {
+  background-color: rgba(109, 171, 115, 0.9);
+  border-color: rgba(109, 171, 115, 0.9);
+}
+.bg-light {
+  border-bottom: cadetblue 8px solid;
+}
+.btn.btn-secondary {
+  background-color: cadetblue;
+  border-color: cadetblue;
 }
